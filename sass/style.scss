@@ -1,0 +1,61 @@
+$num: 24;
+$width: 400px;
+$outer-radius: 140px;
+$inner-radius: 50px;
+$circle-radius: 20px;
+$center-xpos: $width / 2;
+$center-ypos: $width / 2;
+$base-xpos: $center-xpos - $circle-radius / 2;
+$base-ypos: $center-ypos - $circle-radius / 2;
+%abs-center {
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+.board {
+  @extend %abs-center;
+  width: $width;
+  height: $width;
+  border: 1px solid #ccc;
+}
+.center {
+  position: absolute;
+  top: $center-ypos;
+  left: $center-xpos;
+  width: 1px;
+  height: 1px;
+  background-color: #000;
+  z-index: 1;
+}
+@for $i from 0 to $num {
+  $angle: (360 / $num * ($i + 0.5)) % 360;
+  $offset-angle: $angle + (360 / $num * 3);
+  @-webkit-keyframes rotate#{$i} {
+    0% {
+      top: $base-ypos + $outer-radius * sin($angle * pi() / 180);
+      left: $base-xpos + $outer-radius * cos($angle * pi() / 180);
+    } 16.666667%, 83.333333% {
+      top: $base-ypos + $outer-radius * sin($offset-angle * pi() / 180);
+      left: $base-xpos + $outer-radius * cos($offset-angle * pi() / 180);
+    } 100% {
+      top: $base-ypos + $outer-radius * sin($angle * pi() / 180);
+      left: $base-xpos + $outer-radius * cos($angle * pi() / 180);
+    }
+  }
+}
+@for $i from 1 through $num {
+  $no: $i - 1;
+  $angle: (360 / $num * ($no + 0.5)) % 360;
+  .circle:nth-child(#{$i}) {
+    position: absolute;
+    top: $base-ypos + $outer-radius * sin($angle * pi() / 180);
+    left: $base-xpos + $outer-radius * cos($angle * pi() / 180);
+    width: $circle-radius;
+    height: $circle-radius;
+    border-radius: 50%;
+    background-color: hsl(($angle + 180) % 360, 100%, 50%);
+  }
+}

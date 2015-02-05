@@ -25,9 +25,10 @@
 
 .box {
   position: absolute;
-  width: 20px;
+  width: 107.15136px;
   height: 107.15136px;
-  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  border: 1px solid #ccc;
   -webkit-animation-duration: 10s;
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-timing-function: ease-in-out;
@@ -38,7 +39,7 @@
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  left: 0;
+  left: 43.57568px;
 }
 .circle:first-child {
   top: -10px;
@@ -48,6 +49,17 @@
 }
 
 @-webkit-keyframes rotate0 {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  16.666667%, 50% {
+    -webkit-transform: rotate(180deg);
+  }
+  66.666667%, 100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes colorfir0 {
   0% {
     -webkit-transform: rotate(0deg);
   }
@@ -69,7 +81,29 @@
     -webkit-transform: rotate(390deg);
   }
 }
+@-webkit-keyframes colorfir1 {
+  0% {
+    -webkit-transform: rotate(30deg);
+  }
+  16.666667%, 50% {
+    -webkit-transform: rotate(210deg);
+  }
+  66.666667%, 100% {
+    -webkit-transform: rotate(390deg);
+  }
+}
 @-webkit-keyframes rotate2 {
+  0% {
+    -webkit-transform: rotate(60deg);
+  }
+  16.666667%, 50% {
+    -webkit-transform: rotate(240deg);
+  }
+  66.666667%, 100% {
+    -webkit-transform: rotate(420deg);
+  }
+}
+@-webkit-keyframes colorfir2 {
   0% {
     -webkit-transform: rotate(60deg);
   }
@@ -91,7 +125,29 @@
     -webkit-transform: rotate(450deg);
   }
 }
+@-webkit-keyframes colorfir3 {
+  0% {
+    -webkit-transform: rotate(90deg);
+  }
+  16.666667%, 50% {
+    -webkit-transform: rotate(270deg);
+  }
+  66.666667%, 100% {
+    -webkit-transform: rotate(450deg);
+  }
+}
 @-webkit-keyframes rotate4 {
+  0% {
+    -webkit-transform: rotate(120deg);
+  }
+  16.666667%, 50% {
+    -webkit-transform: rotate(300deg);
+  }
+  66.666667%, 100% {
+    -webkit-transform: rotate(480deg);
+  }
+}
+@-webkit-keyframes colorfir4 {
   0% {
     -webkit-transform: rotate(120deg);
   }
@@ -113,7 +169,29 @@
     -webkit-transform: rotate(510deg);
   }
 }
+@-webkit-keyframes colorfir5 {
+  0% {
+    -webkit-transform: rotate(150deg);
+  }
+  16.666667%, 50% {
+    -webkit-transform: rotate(330deg);
+  }
+  66.666667%, 100% {
+    -webkit-transform: rotate(510deg);
+  }
+}
 @-webkit-keyframes rotate6 {
+  0% {
+    -webkit-transform: rotate(180deg);
+  }
+  16.666667%, 50% {
+    -webkit-transform: rotate(360deg);
+  }
+  66.666667%, 100% {
+    -webkit-transform: rotate(540deg);
+  }
+}
+@-webkit-keyframes colorfir6 {
   0% {
     -webkit-transform: rotate(180deg);
   }
@@ -135,7 +213,29 @@
     -webkit-transform: rotate(570deg);
   }
 }
+@-webkit-keyframes colorfir7 {
+  0% {
+    -webkit-transform: rotate(210deg);
+  }
+  16.666667%, 50% {
+    -webkit-transform: rotate(390deg);
+  }
+  66.666667%, 100% {
+    -webkit-transform: rotate(570deg);
+  }
+}
 @-webkit-keyframes rotate8 {
+  0% {
+    -webkit-transform: rotate(240deg);
+  }
+  16.666667%, 50% {
+    -webkit-transform: rotate(420deg);
+  }
+  66.666667%, 100% {
+    -webkit-transform: rotate(600deg);
+  }
+}
+@-webkit-keyframes colorfir8 {
   0% {
     -webkit-transform: rotate(240deg);
   }
@@ -157,7 +257,29 @@
     -webkit-transform: rotate(630deg);
   }
 }
+@-webkit-keyframes colorfir9 {
+  0% {
+    -webkit-transform: rotate(270deg);
+  }
+  16.666667%, 50% {
+    -webkit-transform: rotate(450deg);
+  }
+  66.666667%, 100% {
+    -webkit-transform: rotate(630deg);
+  }
+}
 @-webkit-keyframes rotate10 {
+  0% {
+    -webkit-transform: rotate(300deg);
+  }
+  16.666667%, 50% {
+    -webkit-transform: rotate(480deg);
+  }
+  66.666667%, 100% {
+    -webkit-transform: rotate(660deg);
+  }
+}
+@-webkit-keyframes colorfir10 {
   0% {
     -webkit-transform: rotate(300deg);
   }
@@ -179,8 +301,19 @@
     -webkit-transform: rotate(690deg);
   }
 }
+@-webkit-keyframes colorfir11 {
+  0% {
+    -webkit-transform: rotate(330deg);
+  }
+  16.666667%, 50% {
+    -webkit-transform: rotate(510deg);
+  }
+  66.666667%, 100% {
+    -webkit-transform: rotate(690deg);
+  }
+}
 .box:nth-child(1) {
-  left: 319.34313px;
+  left: 275.76745px;
   top: 146.42432px;
   -webkit-transform: rotate(0deg);
   -webkit-animation-name: rotate0;
@@ -194,7 +327,7 @@
 }
 
 .box:nth-child(2) {
-  left: 302.01444px;
+  left: 258.43876px;
   top: 211.09589px;
   -webkit-transform: rotate(30deg);
   -webkit-animation-name: rotate1;
@@ -208,7 +341,7 @@
 }
 
 .box:nth-child(3) {
-  left: 254.67157px;
+  left: 211.09589px;
   top: 258.43876px;
   -webkit-transform: rotate(60deg);
   -webkit-animation-name: rotate2;
@@ -222,7 +355,7 @@
 }
 
 .box:nth-child(4) {
-  left: 190px;
+  left: 146.42432px;
   top: 275.76745px;
   -webkit-transform: rotate(90deg);
   -webkit-animation-name: rotate3;
@@ -236,7 +369,7 @@
 }
 
 .box:nth-child(5) {
-  left: 125.32843px;
+  left: 81.75275px;
   top: 258.43876px;
   -webkit-transform: rotate(120deg);
   -webkit-animation-name: rotate4;
@@ -250,7 +383,7 @@
 }
 
 .box:nth-child(6) {
-  left: 77.98556px;
+  left: 34.40988px;
   top: 211.09589px;
   -webkit-transform: rotate(150deg);
   -webkit-animation-name: rotate5;
@@ -264,7 +397,7 @@
 }
 
 .box:nth-child(7) {
-  left: 60.65687px;
+  left: 17.08118px;
   top: 146.42432px;
   -webkit-transform: rotate(180deg);
   -webkit-animation-name: rotate6;
@@ -278,7 +411,7 @@
 }
 
 .box:nth-child(8) {
-  left: 77.98556px;
+  left: 34.40988px;
   top: 81.75275px;
   -webkit-transform: rotate(210deg);
   -webkit-animation-name: rotate7;
@@ -292,7 +425,7 @@
 }
 
 .box:nth-child(9) {
-  left: 125.32843px;
+  left: 81.75275px;
   top: 34.40988px;
   -webkit-transform: rotate(240deg);
   -webkit-animation-name: rotate8;
@@ -306,7 +439,7 @@
 }
 
 .box:nth-child(10) {
-  left: 190.0px;
+  left: 146.42432px;
   top: 17.08118px;
   -webkit-transform: rotate(270deg);
   -webkit-animation-name: rotate9;
@@ -320,7 +453,7 @@
 }
 
 .box:nth-child(11) {
-  left: 254.67157px;
+  left: 211.09589px;
   top: 34.40988px;
   -webkit-transform: rotate(300deg);
   -webkit-animation-name: rotate10;
@@ -334,7 +467,7 @@
 }
 
 .box:nth-child(12) {
-  left: 302.01444px;
+  left: 258.43876px;
   top: 81.75275px;
   -webkit-transform: rotate(330deg);
   -webkit-animation-name: rotate11;

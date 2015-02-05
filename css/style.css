@@ -7,6 +7,11 @@
   bottom: 0;
 }
 
+.origin {
+  text-align: center;
+  margin-top: 20px;
+}
+
 .board {
   width: 400px;
   height: 400px;

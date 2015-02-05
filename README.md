@@ -1,5 +1,8 @@
 演示地址(只适配了chrome)：[http://colorful.coding.io](http://colorful.coding.io)  
-原图：[http://7u2mpp.com1.z0.glb.clouddn.com/colorful.gif](http://7u2mpp.com1.z0.glb.clouddn.com/colorful.gif)
+原图：
+
+![http://7u2mpp.com1.z0.glb.clouddn.com/colorful.gif](http://7u2mpp.com1.z0.glb.clouddn.com/colorful.gif)
+
 # CSS3 圆自旋动画
 
 > 不要吐嘈，真不知怎么起名好:sweat_smile:

@@ -3,8 +3,11 @@ $width: 400px;
 $outer-radius: 140px;
 $inner-radius: 50px;
 $circle-radius: 20px;
+$box-num: $num / 2;
 $center-xpos: $width / 2;
 $center-ypos: $width / 2;
+$box-width: $circle-radius;
+$box-height: $outer-radius;
 $base-xpos: $center-xpos - $circle-radius / 2;
 $base-ypos: $center-ypos - $circle-radius / 2;
 %abs-center {
@@ -30,6 +33,24 @@ $base-ypos: $center-ypos - $circle-radius / 2;
   background-color: #000;
   z-index: 1;
 }
+.circle:first-child {
+  position: absolute;
+  width: $circle-radius;
+  height: $circle-radius;
+  border-radius: 50%;
+  left: 0;
+  top: 0 - $circle-radius / 2;
+  // background-color: red;
+}
+.circle:last-child {
+  position: absolute;
+  width: $circle-radius;
+  height: $circle-radius;
+  border-radius: 50%;
+  left: 0;
+  bottom: 0 - $circle-radius / 2;
+  // background-color: blue;
+}
 @for $i from 0 to $num {
   $angle: (360 / $num * ($i + 0.5)) % 360;
   $offset-angle: $angle + (360 / $num * 3);
@@ -46,16 +67,27 @@ $base-ypos: $center-ypos - $circle-radius / 2;
     }
   }
 }
-@for $i from 1 through $num {
+@for $i from 1 through $box-num {
   $no: $i - 1;
-  $angle: (360 / $num * ($no + 0.5)) % 360;
-  .circle:nth-child(#{$i}) {
+  $angle: 360 / $box-num * $no;
+  .box:nth-child(#{$i}) {
     position: absolute;
-    top: $base-ypos + $outer-radius * sin($angle * pi() / 180);
-    left: $base-xpos + $outer-radius * cos($angle * pi() / 180);
-    width: $circle-radius;
-    height: $circle-radius;
-    border-radius: 50%;
-    background-color: hsl(($angle + 180) % 360, 100%, 50%);
+    background-color: rgba(0,0,0,.3);
+    left: $center-xpos + $outer-radius * cos($angle * pi() / 180) - $box-width / 2;
+    top: $center-ypos + $outer-radius * sin($angle * pi() / 180) - $box-height / 2;
+    width: $box-width;
+    height: $box-height;
+    -webkit-transform: rotate(($angle) % 360 + deg);
   }
+  // .circle:nth-child(#{$i}) {
+  //   position: absolute;
+  //   top: $base-ypos + $outer-radius * sin($angle * pi() / 180);
+  //   left: $base-xpos + $outer-radius * cos($angle * pi() / 180);
+  //   width: $circle-radius;
+  //   height: $circle-radius;
+  //   border-radius: 50%;
+  //   background-color: hsl(($angle + 180) % 360, 100%, 50%);
+  //   animation-duration: 5s;
+  //   animation-name: rotate#{$no};
+  // }
 }

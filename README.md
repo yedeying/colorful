@@ -1,4 +1,4 @@
-演示地址(只适配了chrome)：[http://colorful.coding.io](http://colorful.coding.io)  
+演示地址(只适配了chrome)：[https://blog.yedeying.top/sites/colorful/)  
 原图：
 
 ![http://7u2mpp.com1.z0.glb.clouddn.com/colorful.gif](http://7u2mpp.com1.z0.glb.clouddn.com/colorful.gif)
@@ -12,7 +12,7 @@
 
 就这样，又开始了新一轮的折腾之旅。
 ## 分析动画及开工
-一开始的思路呢，当然就是先把小圆给搭起来啦，还好有之前做[这个](http://yedeying999.github.io/2014/09/02/css3-yuan-nei-huan-dong-hua/)的经验。
+一开始的思路呢，当然就是先把小圆给搭起来啦，还好有之前做[这个](http://blog.yedeying.top/2014/09/02/css3-yuan-nei-huan-dong-hua/)的经验。
 
 截图算了一下，小圆个数是24，那也就是每四分之一个大圆就有六个小圆，那好，定个大圆半径，定个小圆半径，就开工了。(所以就是此该的理所当然才导致了之后的重新弄过:sob:)
 
